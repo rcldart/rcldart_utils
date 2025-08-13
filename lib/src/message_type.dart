@@ -8,8 +8,7 @@ abstract class BaseRosMessage<T extends ffi.NativeType> {
   late ffi.Pointer<T> nativeData;
   late ffi.Pointer<T> data;
   // Base class for all ROS messages
-  final rosidlGeneratorDylib =
-      dynamiclibraryloader("${packageName}__rosidl_typesupport_c");
+  DynamicLibrary get rosidlGeneratorDylib => dynamiclibraryloader("${packageName}__rosidl_typesupport_c");
 
   String get typeName;
   String get packageName => 'std_msgs';
