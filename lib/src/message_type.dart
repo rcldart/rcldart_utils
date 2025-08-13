@@ -4,6 +4,9 @@ import 'dart:ffi' as ffi;
 import 'package:ffi/ffi.dart';
 import 'package:rcldart_utils/src/dynamic_library_loader.dart';
 
+import 'dart:ffi';
+import 'dart:io';
+
 abstract class BaseRosMessage<T extends ffi.NativeType> {
   late ffi.Pointer<T> nativeData;
   late ffi.Pointer<T> data;
